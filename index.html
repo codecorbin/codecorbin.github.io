@@ -2,11 +2,11 @@
 <html lang="en">
 	<head>
 		<title>PagerDuty OAuth Redirector</title>
-        <script src="redirect_url.js"></script>
         <script type="text/javascript">
             function codeAddress() {
                 const urlParams = new URLSearchParams(window.location.search);
                 document.getElementById('code').innerText = `${urlParams.get('code')}`;
+                document.getElementById('subdomain').innerText = `${urlParams.get('subdomain')}`;
             }
             window.onload = codeAddress;
             </script>
