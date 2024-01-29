@@ -6,6 +6,7 @@
         <script type="text/javascript">
             function codeAddress() {
                 const urlParams = new URLSearchParams(window.location.search);
+                document.getElementById('code').innerText = 'da code';
                 alert(`${urlParams.get('code')}`);
             }
             window.onload = codeAddress;
