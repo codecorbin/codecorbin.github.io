@@ -3,12 +3,13 @@
 	<head>
 		<title>PagerDuty OAuth Redirector</title>
         <script type="text/javascript">
-            function codeAddress() {
+            function redirectToVscode() {
                 const urlParams = new URLSearchParams(window.location.search);
                 document.getElementById('code').innerText = `${urlParams.get('code')}`;
                 document.getElementById('subdomain').innerText = `${urlParams.get('subdomain')}`;
+                window.open(`vscode://codecorbin.pd-vsc-extension?code=${urlParams.get('code')}&subdomain=${urlParams.get('subdomain')}`);
             }
-            window.onload = codeAddress;
+            window.onload = redirectToVscode;
             </script>
 	</head>
 	<body>
