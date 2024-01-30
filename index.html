@@ -5,16 +5,11 @@
         <script type="text/javascript">
             function redirectToVscode() {
                 const urlParams = new URLSearchParams(window.location.search);
-                document.getElementById('code').innerText = `${urlParams.get('code')}`;
-                document.getElementById('subdomain').innerText = `${urlParams.get('subdomain')}`;
                 window.open(`vscode://codecorbin.pd-vsc-extension?code=${urlParams.get('code')}&subdomain=${urlParams.get('subdomain')}`);
             }
             window.onload = redirectToVscode;
             </script>
 	</head>
 	<body>
-		<p>'ello</p>
-        <p id="code">auth code goes here</p>
-        <p id="subdomain">subdomain goes here</p>
 	</body>
 </html>
